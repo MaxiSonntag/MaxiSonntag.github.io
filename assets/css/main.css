@@ -2299,7 +2299,7 @@ form>.fields>.field.quarter {
 }
 
 label {
-	color: #ffffff;
+	color: #046480;
 	display: block;
 	font-family: Raleway, Helvetica, sans-serif;
 	font-size: 0.8em;
@@ -2322,7 +2322,7 @@ textarea {
 	background: rgba(255, 255, 255, 0.025);
 	border-radius: 5px;
 	border: none;
-	border: solid 2px rgba(255, 255, 255, 0.125);
+	border: solid 2px #04638059;
 	color: inherit;
 	display: block;
 	outline: 0;
@@ -2822,7 +2822,7 @@ ul.contact li:before {
 
 ul.contact li:before {
 	border-radius: 100%;
-	border: solid 2px rgba(255, 255, 255, 0.125);
+	border: solid 2px #04638059;
 	display: inline-block;
 	font-size: 0.8em;
 	height: 2.5em;
@@ -3002,8 +3002,8 @@ button,
 	background-color: transparent;
 	border-radius: 5px;
 	border: 0;
-	box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.125);
-	color: #ffffff !important;
+	box-shadow: inset 0 0 0 2px #04638059;
+	color: #046480 !important;
 	cursor: pointer;
 	display: inline-block;
 	font-family: Raleway, Helvetica, sans-serif;
@@ -3148,6 +3148,14 @@ button:disabled,
 	width: calc(50% - 1.5em);
 }
 
+.features article h3 {
+	color: #ffffff;
+}
+
+.features article p {
+	color: #ffffff;
+}
+
 .features article:nth-child(2n) {
 	margin-right: 0;
 }
@@ -3165,6 +3173,11 @@ button:disabled,
 .features article .image img {
 	border-radius: 5px 5px 0 0;
 	width: 100%;
+
+	&#pdf {
+		-webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
+		mask-image: linear-gradient(to bottom, black 20%, transparent 100%);
+	}
 }
 
 @media screen and (max-width: 980px) {
@@ -3234,10 +3247,16 @@ button:disabled,
 	margin-bottom: 0;
 	opacity: 1;
 	visibility: visible;
+	display: flex;
 }
 
 #header h1 a {
 	border: 0;
+}
+
+#header h1 img {
+	padding-right: 2em;
+	height: 4.5em;
 }
 
 #header nav {
@@ -3271,8 +3290,14 @@ button:disabled,
 	-ms-transition: background-color 0.2s ease-in-out;
 	transition: background-color 0.2s ease-in-out;
 	border-radius: 5px;
-	box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.125);
+	box-shadow: inset 0 0 0 2px #04638059;
+	color: #046380;
 	padding: 0 1.35em;
+
+	&:hover {
+		box-shadow: inset 0 0 0 2px #046380;
+		color: #046380 !important
+	}
 }
 
 #header nav a[href="#menu"]:before {
@@ -3340,9 +3365,17 @@ button:disabled,
 		background-color: inherit;
 	}
 
+	#header h1 img {
+		height: 3.75em;
+	}
+
 }
 
 @media screen and (max-width: 480px) {
+
+	#header h1 a {
+		visibility: hidden;
+	}
 
 	#header nav a[href="#menu"] {
 		width: 4em;
@@ -3396,7 +3429,7 @@ button:disabled,
 	-ms-user-select: none;
 	user-select: none;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	background: rgba(46, 49, 65, 0.8);
+	background: #04638081;
 	cursor: default;
 	height: 100%;
 	left: 0;
@@ -3419,7 +3452,7 @@ button:disabled,
 	-ms-transition: opacity 0.35s ease, -ms-transform 0.35s ease;
 	transition: opacity 0.35s ease, transform 0.35s ease;
 	-webkit-overflow-scrolling: touch;
-	background: #4c5c96;
+	background: #046480;
 	border-radius: 5px;
 	display: block;
 	max-width: 100%;
@@ -3431,6 +3464,7 @@ button:disabled,
 #menu h2 {
 	border-bottom: solid 2px rgba(255, 255, 255, 0.125);
 	padding-bottom: 1em;
+	color: #ffffff;
 }
 
 #menu .close {
@@ -3475,7 +3509,7 @@ button:disabled,
 }
 
 #menu .links li a:hover {
-	background: #45558d;
+	background: #ffffff47;
 }
 
 @media screen and (max-width: 736px) {
@@ -3516,7 +3550,7 @@ body.is-menu-visible #menu .inner {
 /* Banner */
 
 #banner {
-	padding: 10em 0 4.75em 0;
+	padding: 0em 0 4.75em 0;
 }
 
 #banner .inner {
@@ -3537,16 +3571,14 @@ body.is-menu-visible #menu .inner {
 	margin: 0 0 1.3em 0;
 }
 
-#banner .logo .icon {
-	border-radius: 100%;
-	border: solid 2px rgba(255, 255, 255, 0.125);
+#banner .logo img {
 	cursor: default;
 	display: inline-block;
 	font-size: 2em;
-	height: 2.25em;
+	height: 5em;
 	line-height: 2.25em;
 	text-align: center;
-	width: 2.25em;
+	width: 5em;
 }
 
 #banner h2 {
@@ -3603,8 +3635,6 @@ body.is-menu-visible #menu .inner {
 
 	#banner {
 		padding: 7em 0 8.25em 0;
-		background-color: #2e3141;
-		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/gradient.jpg");
 		background-size: auto,
 			cover;
 		background-position: center,
@@ -3951,6 +3981,14 @@ body.is-preload #banner p {
 	-ms-flex: 1;
 }
 
+.wrapper.spotlight:nth-child(1) .image {
+	border-radius: 0%;
+
+	img {
+		border-radius: 0%;
+	}
+}
+
 .wrapper.spotlight .image img {
 	border-radius: 100%;
 	width: 100%;
@@ -4189,6 +4227,14 @@ body.is-preload #banner p {
 
 #footer .inner .contact {
 	width: calc(50% - 1.5em);
+	color: #046480;
+
+	a {
+		color: #046480;
+	}
+	li ::before {
+		box-shadow: inset 0 0 0 2px #04638059;
+	}
 }
 
 #footer .inner .copyright {
@@ -4224,7 +4270,7 @@ body.is-preload #banner p {
 
 	#footer {
 		background-color: #2e3141;
-		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/gradient.jpg");
+		background-image: linear-gradient(to top, rgba(154, 201, 59, 0.8), rgba(201, 207, 202, 0.8)), url("../../images/gradient.jpg");
 		background-size: auto,
 			cover;
 		background-position: center,
@@ -4256,6 +4302,10 @@ body.is-preload #banner p {
 	#footer .inner .contact {
 		width: 100%;
 		margin: 0 0 4em 0;
+
+		ul #text {
+			color: #ffffff;
+		}
 	}
 
 	#footer .inner .copyright {
